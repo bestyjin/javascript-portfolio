@@ -421,13 +421,21 @@ p {
     font-size: var(--font-large);
     margin: 24px 0;
 }
+.contact__link a{
+    margin: 0 5px;
+}
+.contact__link img{
+    width: 48px;
+    height: 48px;
+    transform: translateY(5px);;
+}
 
-
-.contact__link i:hover{
+.contact__link i:hover,
+.contact__link img:hover{
     transform: scale(1.1);
-    color: var(--color-blue);
     transition: all var(--animation-duration) ease;
 }
+
 
 @media screen and (max-width: 768px) {
     .navbar__toggle-btn{
