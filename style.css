@@ -4,14 +4,14 @@
     --color-white: #ffffff;
     --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
-    --color-pink: #fdce35;
-    --color-dark-pink: #ffae00;
+    --color-yellow: #fdce35;
+    --color-dark-yellow: #ffae00;
     --color-black: #4d4d4d;
     --color-grey: #616161;
     --color-light-grey: #7c7979;
     --color-dark-grey: #5e5b5b;
     --color-blue: #73aace;
-    --color-yellow: #fff7d1;
+    --color-light-yellow: #fff7d1;
     --color-orange: #fe9046;
     --color-black: #000000;
 
@@ -96,7 +96,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-pink);
+    background-color: var(--color-yellow);
     padding: 16px;
     color: var(--color-black);
 }
@@ -126,7 +126,16 @@ p {
 }
 
 .navbar__menu__item:hover {
-    background-color: var(--color-dark-pink);
+    background-color: var(--color-dark-yellow);
+}
+
+.navbar__toggle-btn{
+    font-size: 24px;
+    position: absolute;
+    top: 24px;
+    right: 34px;
+    display: none;
+    color: var(--color-white)   ;
 }
 
 /* Home */
@@ -193,7 +202,7 @@ p {
 }
 
 .major__icon:hover i {
-    color: var(--color-pink);
+    color: var(--color-yellow);
     transform: rotate(-30deg) scale(1.1);
 }
 
@@ -244,7 +253,7 @@ p {
 }
 
 #skills {
-    background-color: var(--color-yellow);
+    background-color: var(--color-light-yellow);
 }
 
 .skillset {
@@ -316,7 +325,7 @@ p {
 
 .category__btn.active,
 .category__btn:hover {
-    background-color: var(--color-pink);
+    background-color: var(--color-yellow);
     color: var(--color-white);
 }
 .category__btn.active .category__count,
@@ -401,7 +410,7 @@ p {
 
 /* Contact */
 #contact {
-    background-color: var(--color-pink);
+    background-color: var(--color-yellow);
 }
 
 .contact__title{
@@ -413,8 +422,43 @@ p {
     margin: 24px 0;
 }
 
+
 .contact__link i:hover{
     transform: scale(1.1);
     color: var(--color-blue);
     transition: all var(--animation-duration) ease;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar__toggle-btn{
+        display: block;
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar__menu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .about__majors{
+        flex-direction: column;
+    }
+
+    .major {
+        margin-bottom: 38px;
+    }
+
+    .job__period{
+        display: block;
+    }
+
+    .skillset {
+        flex-direction: column;
+    }
+    .project{
+        flex-grow: 1;
+    }
 }
