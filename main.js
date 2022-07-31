@@ -35,8 +35,25 @@ document.addEventListener('scroll', ()=>{
     home.style.opacity = 1 - window.scrollY/homeHeight;
 });
 
+// 스크롤 시 top arrow 버튼 보이기
+const arrowUp = document.querySelector('.arrow__up');
+document.addEventListener('scroll', ()=>{
+    if(window.scrollY > homeHeight/2){
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
+});
+
+// arrowUp 버튼 클릭시 top으로 이동
+arrowUp.addEventListener('click', ()=>{
+    scrollIntoView('#home');
+})
+
+
 // 스크롤 이동 함수
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: "smooth" });
 }
+

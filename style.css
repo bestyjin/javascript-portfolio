@@ -444,6 +444,22 @@ p {
     transition: all var(--animation-duration) ease;
 }
 
+/* Scroll */
+.arrow__up{
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    font-size: 40px;
+    opacity: 0;
+    transition: opacity var(--animation-duration) ease-in;
+    pointer-events: none;
+}
+
+.arrow__up.visible{
+    opacity: 1;
+    pointer-events: auto;
+}
+
 
 @media screen and (max-width: 768px) {
     .navbar__toggle-btn{
