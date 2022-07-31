@@ -9,7 +9,7 @@ document.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('navbar--dark');
     }
-})
+});
 
 // 메뉴 클릭시 해당 페이지로 스크롤 이동
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -20,13 +20,20 @@ navbarMenu.addEventListener('click', (event) => {
         return;
     }
     scrollIntoView(link);
-})
+});
 
 // Home에 있는 'Contact me' 버튼 클릭 시 Contact 페이지로 스크롤 이동
 const HomeContactBtn = document.querySelector('.home__contact');
 HomeContactBtn.addEventListener('click', ()=>{
     scrollIntoView('#contact')
-})
+});
+
+// scroll 할 때 Home section이 투명해짐
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', ()=>{
+    home.style.opacity = 1 - window.scrollY/homeHeight;
+});
 
 // 스크롤 이동 함수
 function scrollIntoView(selector){
