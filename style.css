@@ -10,7 +10,7 @@
     --color-grey: #616161;
     --color-light-grey: #7c7979;
     --color-dark-grey: #5e5b5b;
-    --color-blue: #73aace;
+    --color-blue: #31a8f7;
     --color-light-yellow: #fff7d1;
     --color-orange: #fe9046;
     --color-black: #000000;
@@ -177,7 +177,7 @@ p {
 
 .section {
     text-align: center;
-    padding: 50px;
+    padding: 100px 0;
     margin: auto;
 }
 
@@ -209,6 +209,9 @@ p {
     transition: all var(--animation-duration) ease;
 }
 
+.major__icon:hover{
+    border-color: var(--color-yellow);
+}
 .major__icon:hover i {
     color: var(--color-yellow);
     transform: rotate(-30deg) scale(1.1);
