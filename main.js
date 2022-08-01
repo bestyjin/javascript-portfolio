@@ -24,21 +24,21 @@ navbarMenu.addEventListener('click', (event) => {
 
 // Home에 있는 'Contact me' 버튼 클릭 시 Contact 페이지로 스크롤 이동
 const HomeContactBtn = document.querySelector('.home__contact');
-HomeContactBtn.addEventListener('click', ()=>{
+HomeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact')
 });
 
 // scroll 할 때 Home section이 투명해짐
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener('scroll', ()=>{
-    home.style.opacity = 1 - window.scrollY/homeHeight;
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 // 스크롤 시 top arrow 버튼 보이기
 const arrowUp = document.querySelector('.arrow__up');
-document.addEventListener('scroll', ()=>{
-    if(window.scrollY > homeHeight/2){
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
         arrowUp.classList.add('visible');
     } else {
         arrowUp.classList.remove('visible');
@@ -46,14 +46,43 @@ document.addEventListener('scroll', ()=>{
 });
 
 // arrowUp 버튼 클릭시 top으로 이동
-arrowUp.addEventListener('click', ()=>{
+arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
-})
+});
+
+// My work - 버튼에 따른 프로젝트 분류
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects')
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (event) => {
+    const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+
+    projectContainer.classList.add('anim-out');
+    setTimeout(() => {
+        projects.forEach(project => {
+            if (filter === '*' || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('anim-out');
+    }, 300);
+
+});
+
+
+
 
 
 // 스크롤 이동 함수
-function scrollIntoView(selector){
+function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: "smooth" });
 }
+
+
 
