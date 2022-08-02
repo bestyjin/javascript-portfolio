@@ -60,6 +60,12 @@ workBtnContainer.addEventListener('click', (event) => {
         return;
     }
 
+    // 클릭된 버튼에 selected class 주기
+    const selected = document.querySelector('.category__btn.selected');
+    selected.classList.remove('selected');
+    const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+    target.classList.add('selected');
+
     projectContainer.classList.add('anim-out');
     setTimeout(() => {
         projects.forEach(project => {
