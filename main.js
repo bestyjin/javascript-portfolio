@@ -19,7 +19,14 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
+});
+
+// 반응형 메뉴에서 버튼 클릭시 메뉴 보이기
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click',()=>{
+    navbarMenu.classList.toggle('open');
 });
 
 // Home에 있는 'Contact me' 버튼 클릭 시 Contact 페이지로 스크롤 이동
