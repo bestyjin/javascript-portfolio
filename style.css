@@ -52,12 +52,12 @@ a {
 
 ul {
     padding-left: 0;
-  }
-  
-  li {
+}
+
+li {
     list-style: none;
-  }
-  
+}
+
 
 button {
     cursor: pointer;
@@ -107,10 +107,11 @@ p {
     width: 100vw;
 }
 
-#navbar.navbar--dark{
+#navbar.navbar--dark {
     background-color: var(--color-yellow);
     transition: all var(--animation-duration) ease-in-out;
 }
+
 .navbar__menu {
     display: flex;
 }
@@ -128,18 +129,19 @@ p {
     border: 1px solid transparent;
     border-radius: var(--size-border-radius);
 }
+
 .navbar__menu__item:hover {
     border: 1px solid var(--color-white);
     background-color: var(--color-dark-yellow);
 }
 
-.navbar__toggle-btn{
+.navbar__toggle-btn {
     position: absolute;
-    top: 24px;
-    right: 34px;
-    font-size: 24px;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
     display: none;
-    color: var(--color-white)   ;
+    color: var(--color-white);
 }
 
 /* Home */
@@ -206,9 +208,10 @@ p {
     transition: all var(--animation-duration) ease;
 }
 
-.major__icon:hover{
+.major__icon:hover {
     border-color: var(--color-yellow);
 }
+
 .major__icon:hover i {
     color: var(--color-yellow);
     transform: rotate(-30deg) scale(1.1);
@@ -329,6 +332,7 @@ p {
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    position: relative;
 }
 
 .category__btn.selected,
@@ -336,11 +340,13 @@ p {
     background-color: var(--color-yellow);
     color: var(--color-white);
 }
+
 .category__btn.selected .category__count,
-.category__btn:hover .category__count{
+.category__btn:hover .category__count {
     opacity: 1;
-    top: 0;
+    top: 5px;
 }
+
 .category__count {
     border: 1px solid var(--color-white);
     border-radius: 50%;
@@ -350,9 +356,9 @@ p {
     color: var(--color-white);
     display: inline-block;
     line-height: 24px;
-    position: relative;
+    position: absolute;
     top: -20px;
-    left: 4px;
+    right: 16px;
     opacity: 0;
     transition: all var(--animation-duration) ease;
 }
@@ -365,7 +371,7 @@ p {
     transition: all var(--animation-duration) ease-out;
 }
 
-.work__projects.anim-out{
+.work__projects.anim-out {
     opacity: 0;
     transform: scale(0.96) translateY(40px);
 }
@@ -406,11 +412,11 @@ p {
     transition: all var(--animation-duration) ease-in;
 }
 
-.project__description h3{
+.project__description h3 {
     color: var(--color-white);
 }
 
-.project__description h3:after{
+.project__description h3:after {
     content: '';
     display: block;
     position: relative;
@@ -422,8 +428,8 @@ p {
     background-color: var(--color-dark-white);
 }
 
-.project:hover .project__description{
-    opacity:0.8;
+.project:hover .project__description {
+    opacity: 0.8;
     transform: translateY(0px);
 }
 
@@ -432,51 +438,64 @@ p {
     background-color: var(--color-yellow);
 }
 
-.contact__title{
+.contact__title {
     margin: 32px 0;
 }
 
-.contact__link{
+.contact__link {
     font-size: var(--font-large);
     margin: 24px 0;
 }
-.contact__link a{
+
+.contact__link a {
     margin: 0 5px;
 }
-.contact__link img{
+
+.contact__link img {
     width: 48px;
     height: 48px;
-    transform: translateY(5px);;
+    transform: translateY(5px);
 }
 
 .contact__link i:hover,
-.contact__link img:hover{
+.contact__link img:hover {
     transform: scale(1.1);
     transition: all var(--animation-duration) ease;
 }
 
 /* Scroll */
-.arrow__up{
+.arrow__up {
     position: fixed;
     right: 30px;
     bottom: 20px;
     font-size: 40px;
+    color: var(--color-yellow);
     opacity: 0;
     transition: opacity var(--animation-duration) ease-in;
     pointer-events: none;
 }
 
-.arrow__up.visible{
+.arrow__up.visible {
     opacity: 1;
     pointer-events: auto;
 }
 
 
 @media screen and (max-width: 768px) {
-    .navbar__toggle-btn{
+    :root {
+        /* Font size */
+        --font-large: 30px;
+        --font-medium: 24px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+    }
+
+    .navbar__toggle-btn {
         display: block;
     }
-    #navbar{
+
+    #navbar {
         flex-direction: column;
         align-items: flex-start;
         background-color: var(--color-yellow);
@@ -489,37 +508,83 @@ p {
         text-align: center;
         width: 100%;
     }
-    
-    .navbar__menu{
+
+    .navbar__menu {
         display: none;
     }
-    .navbar__menu.open{
+
+    .navbar__menu.open {
         display: block;
     }
 
-    #about p, .section__container p {
-        padding: 0 15px;
+    .section {
+        padding: 50px 16px;
     }
-    .about__majors{
+
+    .about__majors {
         flex-direction: column;
+        margin: 40px 0;
     }
 
     .major {
         margin-bottom: 38px;
     }
 
-    .about__jobs{
-        margin-left: 20px;
+    .about__jobs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .job__period{
+    #job__company {
+        margin-left: 10px;
+    }
+
+    #job__logo-company {
+        width: 80px;
+        height: 30px;
+        margin-right: 42px;
+
+    }
+
+    #job__logo-university {
+        width: 120px;
+        height: 30px;
+    }
+
+    .job__name {
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .job__period {
         display: block;
+        margin: 0;
     }
 
     .skillset {
         flex-direction: column;
     }
-    .project{
+
+    .project {
         flex-grow: 1;
     }
+
+    .category__btn{
+        margin-top: 4px;
+        width: 100%;
+    }
+
+    .contact__link img {
+        width: 30px;
+        height: 30px;
+        transform: translateY(3px);
+    }
+
+    .arrow__up {
+        right: 16px;
+        bottom: 16px;
+        font-size: 30px;
+    }
+    
 }
