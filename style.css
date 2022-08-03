@@ -484,13 +484,15 @@ p {
         z-index: 99;
     }
 
-    .navbar__menu {
+    .navbar__menu-div {
         flex-direction: column;
         text-align: center;
         width: 100%;
+    }
+    
+    .navbar__menu{
         display: none;
     }
-
     .navbar__menu.open{
         display: block;
     }
