@@ -60,7 +60,7 @@ arrowUp.addEventListener('click', () => {
 // My work - 버튼에 따른 프로젝트 분류
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects')
-const projects = document.querySelectorAll('.project');
+const projects = document.querySelectorAll('.project__container');
 workBtnContainer.addEventListener('click', (event) => {
     const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
     if (filter == null) {

@@ -469,6 +469,9 @@ p {
     background-color: var(--color-dark-yellow);
 }
 
+.project__container.invisible {
+    display: none;
+}
 
 /* Contact */
 #contact {
