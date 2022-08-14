@@ -25,7 +25,7 @@ navbarMenu.addEventListener('click', (event) => {
 
 // 반응형 메뉴에서 버튼 클릭시 메뉴 보이기
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
-navbarToggleBtn.addEventListener('click',()=>{
+navbarToggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
 });
 
@@ -49,6 +49,14 @@ document.addEventListener('scroll', () => {
         arrowUp.classList.add('visible');
     } else {
         arrowUp.classList.remove('visible');
+    }
+
+    // Contact section에서 top arrow 버튼 색 변경
+    const section_contact = document.querySelector('#contact');
+    if (window.pageYOffset + section_contact.getBoundingClientRect().top < window.pageYOffset + arrowUp.getBoundingClientRect().top) {
+        arrowUp.classList.add('arrow__white');
+    } else {
+        arrowUp.classList.remove('arrow__white');
     }
 });
 
@@ -86,7 +94,6 @@ workBtnContainer.addEventListener('click', (event) => {
     }, 300);
 
 });
-
 
 
 

@@ -105,6 +105,7 @@ p {
     padding: 0px 30px;
     color: var(--color-black);
     width: 100vw;
+    z-index: 99;
 }
 
 #navbar.navbar--dark {
@@ -120,6 +121,7 @@ p {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
     color: var(--color-white);
+    /* text-shadow: -1px 0px yellow, 0px 1px yellow, 1px 0px yellow, 0px -1px yellow; */
 }
 
 .navbar__menu__item {
@@ -518,6 +520,10 @@ p {
 .arrow__up.visible {
     opacity: 1;
     pointer-events: auto;
+}
+
+.arrow__up.arrow__white {
+    color: white;
 }
 
 
