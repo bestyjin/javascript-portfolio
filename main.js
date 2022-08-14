@@ -53,6 +53,7 @@ document.addEventListener('scroll', () => {
 
     // Contact section에서 top arrow 버튼 색 변경
     const section_contact = document.querySelector('#contact');
+    // 컨텐츠의 절대 위치 비교
     if (window.pageYOffset + section_contact.getBoundingClientRect().top < window.pageYOffset + arrowUp.getBoundingClientRect().top) {
         arrowUp.classList.add('arrow__white');
     } else {
