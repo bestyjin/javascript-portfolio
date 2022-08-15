@@ -29,6 +29,9 @@ navbarToggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
 });
 
+// 소개글 fade in
+document.querySelector('.home__container').classList.remove('fade');
+
 // Home에 있는 'Contact me' 버튼 클릭 시 Contact 페이지로 스크롤 이동
 const HomeContactBtn = document.querySelector('.home__contact');
 HomeContactBtn.addEventListener('click', () => {
