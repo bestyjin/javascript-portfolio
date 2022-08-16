@@ -421,7 +421,7 @@ p {
     font-weight: bold;
 }
 
-.project__container p {
+.project__subtitle {
     font-size: 15px;
     color: gray;
 }
@@ -624,7 +624,8 @@ p {
     }
 
     .project__container{
-        height: 1200px;
+        height: auto;
+        padding-bottom: 80px;
     }
 
     .project__contents {
@@ -643,9 +644,6 @@ p {
         margin-top: 50px;
 
     }
-
-
-
 
     .contact__link img {
         width: 30px;
