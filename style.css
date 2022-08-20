@@ -156,6 +156,8 @@ p {
     text-align: center;
     padding: 40px;
     padding-top: 180px;
+    display: flex;
+    justify-content: center;
 }
 
 .home__container {
@@ -168,11 +170,9 @@ p {
     opacity: 0;
 }
 
-.home__title,
-.home__description {
+.home__title {
     color: var(--color-black);
     text-align: left;
-    transform: translateX(30%);
 }
 
 .home__title span {
