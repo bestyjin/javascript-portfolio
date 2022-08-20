@@ -137,7 +137,7 @@ p {
 }
 
 .navbar__menu__item:hover {
-    border: 1px solid var(--color-white);
+    border: 1px solid var(--color-black);
     background-color: var(--color-dark-yellow);
 }
 
@@ -296,6 +296,61 @@ p {
 .section__container h2 {
     margin: 20px 0;
 }
+
+.skill__group{
+    display: flex;
+    margin-top: 50px;
+}
+.skill__column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skill__img{
+    background-color: white;
+    width: 80%;
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 15px;
+}
+
+.skill__img h3{
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.skill__img hr{
+    color: var(--color-yellow);
+    background-color: var(--color-yellow);
+    border: 0;
+    width: 50%;
+    height: 2px;
+}
+
+
+.skill__img img{
+    width: 80%;
+    padding: 30px 0;
+}
+
+.skill__img:hover {
+    transform: translateY(-10px);
+    transition: all var(--animation-duration) ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .skillset {
     display: flex;
