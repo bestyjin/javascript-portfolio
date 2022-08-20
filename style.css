@@ -5,7 +5,8 @@
     --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
     --color-yellow: #fdce35;
-    --color-dark-yellow: #c69d00;
+    --color-dark-yellow: #ffae00;
+    --color-gold: #c69d00;
     --color-black: #4d4d4d;
     --color-grey: #616161;
     --color-light-grey: #7c7979;
@@ -137,7 +138,7 @@ p {
 }
 
 .navbar__menu__item:hover {
-    background-color: var(--color-dark-yellow);
+    background-color: var(--color-gold);
     color: var(--color-white);
 }
 
@@ -442,7 +443,6 @@ p {
 
 .project {
     width: 100%;
-    height: 375px;
     padding: 20px;
     background-color: var(--color-white);
 }
@@ -637,7 +637,7 @@ p {
 
     .project__container {
         height: auto;
-        padding-bottom: 80px;
+        padding: 28px;
     }
 
     .project__contents {
@@ -646,16 +646,74 @@ p {
 
     }
 
-    .projectcontents {
-        width: 80%;
+    .project__container h3 {
+        font-size: var(--font-regular);
     }
+    
+    .project__subtitle {
+        font-size: var(--font-small);
+    }
+    
+    
+    .project__contents {
+        margin-top: 30px;
+    }
+    
+    .projectcontents {
+        width: 100%;
+    }
+    .project {
+        padding: 10px;
+    }
+    
 
     .project__description {
-        width: 80%;
+        width: 90%;
         margin-left: 0;
-        margin-top: 50px;
+        margin-top: 30px;
 
     }
+
+
+    .project__link {
+        width: 70%;
+        height: 48px;
+        margin-top: 30px;
+        line-height: 48px;
+        margin-left: 15%;
+    }
+    
+    #project__link-hompage{
+        width: 60%;
+        height: 40px;
+        line-height: 38px;
+        margin-left: 20%;
+    }
+    .project__link a {
+        font-weight: bold;
+        font-size: var(--font-small);
+    }
+    
+    .project__github {
+        font-size: 30px;
+        transform: translateY(5px);
+        margin-right: 7px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .contact__link img {
         width: 30px;
