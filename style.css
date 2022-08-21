@@ -421,6 +421,10 @@ p {
 
 }
 
+.project__mobile{
+    height: 770px;
+}
+
 .project__container h3 {
     font-size: 25px;
     font-weight: bold;
