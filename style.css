@@ -176,8 +176,9 @@ p {
     text-align: left;
 }
 
-.home__title span {
-    color: blue;
+#icon__infinity{
+    color: var(--color-dark-yellow);
+    font-size: 80px; 
 }
 
 .home__contact {
