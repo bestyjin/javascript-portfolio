@@ -212,7 +212,7 @@ p {
 .about__majors {
     display: flex;
     justify-content: space-between;
-    margin: 80px 0;
+    margin: 150px 0;
 }
 
 .major__icon {
@@ -247,6 +247,13 @@ p {
 
 .major__description {
     font-size: var(--font-small);
+}
+
+.about__jobs{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+
 }
 
 .job {
@@ -291,6 +298,11 @@ p {
     height: 38px;
 }
 
+.university__major {
+    font-size: 14px;
+}
+
+/* Skills */
 #skills {
     background-color: var(--color-light-yellow);
 }
@@ -442,6 +454,7 @@ p {
     width: 100%;
     padding: 20px;
     background-color: var(--color-white);
+    border-radius: 10px;
 }
 
 .project__container img {
@@ -452,6 +465,7 @@ p {
     text-align: left;
     width: 50%;
     margin-left: 50px;
+    margin-top: 15px;
 }
 
 .project__link {
