@@ -24,11 +24,12 @@ HTML, CSS, Vanila JS로 제작한 포트폴리오 웹페이지입니다.
     3. 메뉴 클릭시 해당 페이지로 이동
     <br/>
   + HOME
-    1. 페이지가 시작하자마자 적용되는 애니메이션(opacity 0 -> 1)
+    1. 페이지가 시작하자마자 적용되는 애니메이션(opacity: 0 -> 1)
 ![img06](https://user-images.githubusercontent.com/71006256/187034827-edf92020-00c9-44c8-865c-8ebb28e2f9d4.png)
     2. 'CONTACT ME' 버튼 마우스 hover시 버튼 배경색, 글자색 변경
     
     ![img05](https://user-images.githubusercontent.com/71006256/187034721-d1c44f40-99d1-43c0-a5b8-2d21eea06c05.png)
+    
     3. HOME section을 벗어나면서부터 top 버튼 display
     <br/>
   + ABOUT ME
@@ -45,11 +46,13 @@ HTML, CSS, Vanila JS로 제작한 포트폴리오 웹페이지입니다.
     <br/>
   + PROJECTS
     1. 카테고리 별 버튼과 해당 카테고리의 프로젝트 개수 표시
-
+    
     ![image11](https://user-images.githubusercontent.com/71006256/187033601-9592edde-add1-4776-ba4e-e597f5379fd2.png)
+    
     2. 카테고리 버튼에 마우스 hover시 버튼 색 변경 및 개수 애니메이션으로 등장
-
+    
     ![image12](https://user-images.githubusercontent.com/71006256/187033603-fa6e57a8-cb6e-42f0-9b9b-d8a40244708b.png)
+    
     3. 카테고리 버튼 클릭시 해당하는 프로젝트 display
 ![img03](https://user-images.githubusercontent.com/71006256/187034642-36cfd944-1055-41c3-b1a9-f94715864554.png)
 ![img04](https://user-images.githubusercontent.com/71006256/187034644-22326fa5-6a33-4ee5-a823-e9c608c9c9f7.png)
@@ -61,5 +64,6 @@ HTML, CSS, Vanila JS로 제작한 포트폴리오 웹페이지입니다.
     1. 해당 section에서는 top 버튼 색 변경
 
     ![img01](https://user-images.githubusercontent.com/71006256/187034619-775f8c90-95a5-4153-81d8-b010e5240047.png)
+    
     2. Git hub, T-story 버튼 마우스 hover시 버튼 크기 커짐 애니메이션 (transform: scale();)
     <br/>
