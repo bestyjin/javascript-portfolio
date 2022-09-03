@@ -17,11 +17,11 @@
     --color-black: #000000;
 
     /* Font size */
-    --font-large: 48px;
-    --font-medium: 28px;
-    --font-regular: 18px;
-    --font-small: 16px;
-    --font-micro: 14px;
+    --font-large: 40px;
+    --font-medium: 20px;
+    --font-regular: 17px;
+    --font-small: 10px;
+    --font-micro: 10px;
 
     /* Font weight */
     --weight-bold: 700;
@@ -155,8 +155,8 @@ p {
 #home {
     background: url("imgs/home_background.png") center/cover no-repeat;
     text-align: center;
-    padding: 40px;
-    padding-top: 180px;
+    padding: 20px;
+    padding-top: 150px;
     display: flex;
     justify-content: center;
 }
@@ -205,6 +205,7 @@ p {
 
 .section__container {
     max-width: 1200px;
+    width: 80%;
     margin: auto;
 }
 
@@ -298,7 +299,7 @@ p {
     height: 38px;
 }
 
-.university__major {
+.job__name, .job__period, .university__major {
     font-size: 14px;
 }
 
